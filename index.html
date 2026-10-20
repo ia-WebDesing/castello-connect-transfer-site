@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Castelló Connect Transfer | Traslados privados desde Castellón</title>
+  <meta name="description" content="Traslados privados desde Castellón de la Plana: aeropuertos, puerta a puerta, larga distancia, excursiones y servicio por horas. Siempre bajo reserva previa.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Castelló Connect Transfer | Tu viaje, a tu medida">
+  <meta property="og:description" content="Traslados privados desde Castellón, seguimiento de vuelos y viajes puerta a puerta por toda España. Bajo reserva previa.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/cct_flyer_hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/cct_flyer_hero.jpg">
+  <meta name="theme-color" content="#07111D">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Castelló Connect">
+  <style>
+    :root {
+      --navy: #07111d;
+      --navy-2: #10243a;
+      --navy-3: #183c63;
+      --gold: #e6b24c;
+      --gold-light: #f3d58e;
+      --paper: #f6f7f8;
+      --white: #fff;
+      --ink: #111d2b;
+      --muted: #5d6876;
+      --line: #dce2e9;
+      --shadow: 0 18px 48px rgba(7,17,29,.12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    header { position: sticky; top: 0; z-index: 10; color: var(--white); background: rgba(7,17,29,.97); border-bottom: 1px solid rgba(230,178,76,.38); backdrop-filter: blur(12px); }
+    .nav { min-height: 96px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; color: var(--white); text-decoration: none; flex: 0 0 auto; }
+    .brand-logo { display: block; width: 270px; max-height: 96px; height: auto; object-fit: contain; border-radius: 6px; }
+    nav { display: flex; align-items: center; justify-content: center; gap: 22px; flex-wrap: wrap; }
+    nav a { color: #e2e8ef; text-decoration: none; font-size: .94rem; font-weight: 700; }
+    nav a:hover { color: var(--gold-light); }
+    .button { display: inline-flex; justify-content: center; align-items: center; min-height: 50px; padding: 12px 20px; border-radius: 999px; color: var(--navy); background: var(--gold); font-weight: 850; text-decoration: none; box-shadow: 0 8px 22px rgba(230,178,76,.18); transition: transform .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-2px); background: var(--gold-light); }
+    .button.secondary { color: var(--white); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.3); box-shadow: none; }
+    .hero { padding: 68px 0 72px; color: var(--white); background: radial-gradient(circle at 85% 0%, rgba(38,105,166,.42), transparent 30%), linear-gradient(125deg, #050a12 0%, #0a1b30 56%, #123e6c 100%); }
+    .hero-copy { max-width: 880px; }
+    .eyebrow { color: #b47b19; font-size: .78rem; font-weight: 900; text-transform: uppercase; letter-spacing: .16em; }
+    .hero .eyebrow, .dark .eyebrow { color: var(--gold-light); }
+    h1 { margin: 12px 0 18px; max-width: 850px; font-size: clamp(2.6rem, 6vw, 5.3rem); line-height: .99; letter-spacing: -.055em; }
+    .hero-copy p { max-width: 760px; margin: 0; color: #d9e3ee; font-size: clamp(1.04rem, 1.8vw, 1.22rem); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .hero-poster { margin: 42px 0 0; overflow: hidden; border: 1px solid rgba(230,178,76,.58); border-radius: 24px; background: var(--navy); box-shadow: 0 26px 70px rgba(0,0,0,.32); }
+    .hero-poster img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    section { padding: 78px 0; scroll-margin-top: 92px; }
+    .section-head { max-width: 760px; margin-bottom: 30px; }
+    .section-head h2 { margin: 8px 0 12px; font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.04; letter-spacing: -.045em; }
+    .section-head p { margin: 0; color: var(--muted); font-size: 1.04rem; }
+    .service-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+    .service-card { min-height: 232px; padding: 25px; border: 1px solid var(--line); border-top: 3px solid var(--gold); border-radius: 20px; background: var(--white); box-shadow: 0 8px 25px rgba(10,25,43,.055); }
+    .service-no { display: inline-block; margin-bottom: 18px; color: #a87012; font-size: .8rem; font-weight: 900; letter-spacing: .14em; }
+    .service-card h3 { margin: 0 0 9px; font-size: 1.12rem; line-height: 1.25; }
+    .service-card p { margin: 0; color: var(--muted); font-size: .95rem; }
+    .brand-feature { display: grid; grid-template-columns: minmax(280px, 400px) 1fr; align-items: center; gap: 36px; max-width: 1020px; margin: 40px auto 0; padding: 26px; border: 1px solid rgba(230,178,76,.48); border-radius: 24px; color: var(--white); background: linear-gradient(125deg,#07111d,#153d66); box-shadow: var(--shadow); }
+    .brand-feature img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border: 1px solid rgba(230,178,76,.45); border-radius: 18px; }
+    .brand-feature-copy h3 { margin: 8px 0 12px; font-size: clamp(1.6rem,3vw,2.35rem); line-height: 1.08; }
+    .brand-feature-copy p { margin: 0 0 22px; color: #d8e2ef; }
+    .dark { color: var(--white); background: linear-gradient(125deg, #07111d 0%, #0d2440 58%, #153f69 100%); }
+    .dark .section-head p { color: #d8e2ef; }
+    .benefits { display: grid; gap: 12px; margin: 24px 0 0; padding: 0; list-style: none; }
+    .benefits li { display: flex; gap: 12px; color: #eef2f7; }
+    .benefits li::before { content: "✓"; color: var(--gold-light); font-weight: 900; }
+    .travel { background: #fff; }
+    .destinations { background: #f2f4f7; }
+    .destination-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .destination-card { overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--white); box-shadow: 0 9px 25px rgba(10,25,43,.06); }
+    .destination-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+    .destination-copy { padding: 20px 21px 23px; }
+    .destination-copy h3 { margin: 7px 0 8px; font-size: 1.12rem; line-height: 1.24; }
+    .destination-copy p { margin: 0; color: var(--muted); font-size: .94rem; }
+    .destination-note { margin: 21px 0 0; color: var(--muted); font-size: .83rem; }
+    .destination-action { margin-top: 24px; }
+    .booking { background: #f2f4f7; }
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; counter-reset: step; }
+    .step { padding: 25px; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
+    .step::before { counter-increment: step; content: "0" counter(step); display: block; margin-bottom: 14px; color: #a87012; font-size: .84rem; font-weight: 900; letter-spacing: .13em; }
+    .step h3 { margin: 0 0 8px; font-size: 1.1rem; }
+    .step p { margin: 0; color: var(--muted); font-size: .96rem; }
+    .final-cta { padding: 62px 0; color: var(--white); background: linear-gradient(115deg,#07111d,#153d66); }
+    .cta-row { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .cta-row h2 { margin: 0 0 8px; max-width: 690px; font-size: clamp(2rem,4vw,3.1rem); line-height: 1.04; letter-spacing: -.04em; }
+    .cta-row p { margin: 0; color: #d8e2ef; }
+    footer { padding: 28px 0 40px; color: #c0cad7; background: #050a11; border-top: 1px solid rgba(230,178,76,.4); font-size: .92rem; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 22px; flex-wrap: wrap; }
+    .footer-brand { color: var(--white); font-weight: 850; }
+    .phone { color: var(--gold-light); font-weight: 850; text-decoration: none; }
+    @media (max-width: 900px) { .nav { flex-wrap: wrap; padding: 13px 0; } nav { order: 3; width: 100%; justify-content: flex-start; } .service-grid, .destination-grid { grid-template-columns: repeat(2,1fr); } .brand-feature { grid-template-columns: 1fr; max-width: 560px; } .brand-feature img { max-width: 380px; margin: 0 auto; } }
+    @media (max-width: 640px) { .wrap { width: min(100% - 30px,1180px); } .nav { gap: 12px; } .brand-logo { width: 205px; max-height: 78px; } nav { gap: 14px; } nav a { font-size: .86rem; } .nav > .button { min-height: 44px; padding: 9px 13px; font-size: .84rem; } .hero { padding: 52px 0 56px; } .hero-poster { margin-top: 30px; border-radius: 16px; } section { padding: 58px 0; } .service-grid, .destination-grid, .steps { grid-template-columns: 1fr; } .service-card { min-height: 0; } .brand-feature { padding: 18px; gap: 20px; } .cta-row { align-items: flex-start; flex-direction: column; } .cta-row .button { width: 100%; } .hero .actions .button { width: 100%; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio" aria-label="Castelló Connect Transfer, inicio">
+        <img class="brand-logo" src="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/castello-connect-transfer-logo.png" alt="Logotipo oficial de Castelló Connect Transfer" width="1024" height="373" fetchpriority="high">
+      </a>
+      <nav aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#aeropuerto">Aeropuerto</a>
+        <a href="#destinos">Destinos</a>
+        <a href="#reserva">Cómo reservar</a>
+      </nav>
+      <a class="button" href="https://wa.me/34614087896?text=CastelloConnect">WhatsApp · 614 087 896</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap">
+        <div class="hero-copy">
+          <div class="eyebrow">Transporte privado · Bajo reserva</div>
+          <h1>Traslados privados desde Castellón.</h1>
+          <p>Trabajamos bajo reserva previa y te confirmamos el precio final antes de aceptar el servicio.</p>
+          <div class="actions">
+            <a class="button" href="https://wa.me/34614087896?text=CastelloConnect">Pedir presupuesto por WhatsApp</a>
+            <a class="button secondary" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+        <figure class="hero-poster">
+          <img src="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/cct_flyer_hero.jpg" alt="Imagen principal de Castelló Connect Transfer con el coche, servicios y WhatsApp" width="1024" height="576" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Servicios especializados</div>
+          <h2>Un traslado pensado para tu viaje.</h2>
+          <p>Cuéntanos el trayecto, cuántas personas viajan y el equipaje. Te confirmamos la opción adecuada y el precio final antes de aceptar.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-no">01 · AEROPUERTO</span>
+            <h3>Recogidas en aeropuerto</h3>
+            <p>Seguimiento del vuelo 24/7. La espera comienza al aterrizar y la primera hora es gratuita.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-no">02 · PUERTA A PUERTA</span>
+            <h3>Traslados directos</h3>
+            <p>Salidas desde Castellón y localidades cercanas, con destino donde necesites.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-no">03 · LARGA DISTANCIA</span>
+            <h3>Viajes por España</h3>
+            <p>Rutas bajo reserva por la Comunidad Valenciana y toda España.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-no">04 · A TU RITMO</span>
+            <h3>Horas y excursiones</h3>
+            <p>Organiza paradas, visitas y desplazamientos con los tiempos acordados.</p>
+          </article>
+        </div>
+        <div class="brand-feature">
+          <img src="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/cct_brand_square.jpg" alt="Pieza cuadrada de Castelló Connect Transfer con identidad dorada, coche ilustrado y lista de servicios" width="1024" height="1024" loading="lazy">
+          <div class="brand-feature-copy">
+            <div class="eyebrow">Un servicio organizado contigo</div>
+            <h3>Tu traslado, a tu medida.</h3>
+            <p>Cuéntanos el origen, el destino, la fecha y cuántas personas viajan. Te confirmamos la opción y el precio final antes de reservar.</p>
+            <a class="button" href="https://wa.me/34614087896?text=CastelloConnect">Consultar por WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark" id="aeropuerto">
+      <div class="wrap">
+        <div>
+          <div class="section-head">
+            <div class="eyebrow">Recogidas en aeropuerto</div>
+            <h2>Llega y continúa tu viaje con tranquilidad.</h2>
+            <p>Seguimos el vuelo y coordinamos la recogida para que el traslado esté organizado desde el aterrizaje.</p>
+          </div>
+          <ul class="benefits">
+            <li>Seguimiento del vuelo 24/7.</li>
+            <li>El tiempo de espera empieza cuando el avión toca tierra.</li>
+            <li>Primera hora de espera gratuita.</li>
+            <li>Precio final claro y reserva previa.</li>
+          </ul>
+          <div class="actions">
+            <a class="button" href="https://wa.me/34614087896?text=CastelloConnect">Organizar mi recogida</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="travel" id="trayectos">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Cobertura del servicio</div>
+          <h2>Desde Castellón, por toda España.</h2>
+          <p>Organizamos traslados privados por la Comunidad Valenciana y rutas de larga distancia, siempre bajo reserva y con el precio final confirmado antes de aceptar.</p>
+          <div class="actions"><a class="button" href="https://wa.me/34614087896?text=CastelloConnect">Consultar disponibilidad</a></div>
+        </div>
+        <figure class="hero-poster coverage-poster">
+          <img src="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/cct_flyer_principal.jpg" alt="Banner anterior de Castelló Connect Transfer, ahora como apoyo en la sección de cobertura" width="1024" height="576" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <section class="destinations" id="destinos">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Ideas de viaje por España</div>
+          <h2>Destinos para descubrir desde Castellón.</h2>
+          <p>Tomamos como referencia algunos lugares de la provincia y rutas de larga distancia. Organizamos traslados privados bajo reserva; no son visitas guiadas.</p>
+        </div>
+        <div class="destination-grid">
+          <article class="destination-card">
+            <img src="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/cct_destino_fadri_4k.webp" alt="Imagen ilustrativa del centro histórico de Castellón y una torre campanario" width="3840" height="2160" loading="lazy">
+            <div class="destination-copy">
+              <div class="eyebrow">Cultura · Castellón</div>
+              <h3>El Fadrí y el centro histórico</h3>
+              <p>Traslados privados al centro de Castellón de la Plana y sus alrededores.</p>
+            </div>
+          </article>
+          <article class="destination-card">
+            <img src="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/cct_destino_grao_4k.webp" alt="Imagen ilustrativa de la costa mediterránea y el pinar junto al Grao de Castellón" width="3840" height="2160" loading="lazy">
+            <div class="destination-copy">
+              <div class="eyebrow">Costa · Castellón</div>
+              <h3>Grao y Playa del Pinar</h3>
+              <p>Conecta la ciudad con la costa en un trayecto organizado bajo reserva.</p>
+            </div>
+          </article>
+          <article class="destination-card">
+            <img src="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/cct_destino_desierto_4k.webp" alt="Imagen ilustrativa del paisaje del Desierto de las Palmas, en Benicàssim" width="3840" height="2160" loading="lazy">
+            <div class="destination-copy">
+              <div class="eyebrow">Naturaleza · Benicàssim</div>
+              <h3>Desierto de las Palmas</h3>
+              <p>Planifica el desplazamiento y acuerda las paradas según el servicio.</p>
+            </div>
+          </article>
+          <article class="destination-card">
+            <img src="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/cct_destino_aeropuerto_4k.webp" alt="Imagen ilustrativa de una terminal de aeropuerto en Castellón" width="3840" height="2160" loading="lazy">
+            <div class="destination-copy">
+              <div class="eyebrow">Aeropuerto · Castellón</div>
+              <h3>Recogidas y traslados</h3>
+              <p>Coordinamos la recogida con seguimiento del vuelo 24/7 y reserva previa.</p>
+            </div>
+          </article>
+          <article class="destination-card">
+            <img src="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/cct_destino_madrid_4k.webp" alt="Imagen ilustrativa de Madrid como destino de un viaje de larga distancia" width="3840" height="2160" loading="lazy">
+            <div class="destination-copy">
+              <div class="eyebrow">Larga distancia · España</div>
+              <h3>Madrid y otros destinos</h3>
+              <p>Viajes privados puerta a puerta a Madrid y otros puntos de España, bajo reserva.</p>
+            </div>
+          </article>
+        </div>
+        <p class="destination-note">Las imágenes son ilustrativas. El trayecto, las paradas y la disponibilidad se confirman al organizar cada servicio.</p>
+        <div class="destination-action"><a class="button" href="https://wa.me/34614087896?text=CastelloConnect">Consultar un traslado</a></div>
+      </div>
+    </section>
+
+    <section class="booking" id="reserva">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Cómo reservar</div>
+          <h2>Organizar tu traslado es sencillo.</h2>
+          <p>Primero confirmamos el servicio y el precio; después coordinamos contigo los detalles necesarios para el viaje.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <h3>Cuéntanos la ruta</h3>
+            <p>Envíanos el origen, el destino, la fecha y cuántas personas viajan.</p>
+          </article>
+          <article class="step">
+            <h3>Recibe el precio final</h3>
+            <p>Te indicamos el precio y la opción adecuada para el trayecto.</p>
+          </article>
+          <article class="step">
+            <h3>Confirma tu reserva</h3>
+            <p>Cuando aceptes, coordinamos los detalles operativos contigo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="wrap cta-row">
+        <div>
+          <div class="eyebrow">La confianza también se transporta</div>
+          <h2>¿Organizamos tu próximo trayecto?</h2>
+          <p>Escríbenos por WhatsApp y cuéntanos desde dónde sales y adónde necesitas ir.</p>
+        </div>
+        <a class="button" href="https://wa.me/34614087896?text=CastelloConnect">WhatsApp · +34 614 087 896</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div><div class="footer-brand">Castelló Connect Transfer</div><div>Tu viaje, a tu medida. Servicios especializados.</div></div>
+      <div><a class="phone" href="https://wa.me/34614087896?text=CastelloConnect">WhatsApp: +34 614 087 896</a><div>Servicio bajo reserva previa · Castellón de la Plana</div></div>
+    </div>
+  </footer>
+</body>
+</html>
