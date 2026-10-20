@@ -98,7 +98,12 @@
     .phone { color: var(--gold-light); font-weight: 850; text-decoration: none; }
     @media (max-width: 900px) { .nav { flex-wrap: wrap; padding: 13px 0; } nav { order: 3; width: 100%; justify-content: flex-start; } .service-grid, .destination-grid { grid-template-columns: repeat(2,1fr); } .brand-feature { grid-template-columns: 1fr; max-width: 560px; } .brand-feature img { max-width: 380px; margin: 0 auto; } }
     @media (max-width: 640px) { .wrap { width: min(100% - 30px,1180px); } .nav { gap: 12px; } .brand-logo { width: 205px; max-height: 78px; } nav { gap: 14px; } nav a { font-size: .86rem; } .nav > .button { min-height: 44px; padding: 9px 13px; font-size: .84rem; } .hero { padding: 52px 0 56px; } .hero-poster { margin-top: 30px; border-radius: 16px; } section { padding: 58px 0; } .service-grid, .destination-grid, .steps { grid-template-columns: 1fr; } .service-card { min-height: 0; } .brand-feature { padding: 18px; gap: 20px; } .cta-row { align-items: flex-start; flex-direction: column; } .cta-row .button { width: 100%; } .hero .actions .button { width: 100%; } }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+    .whatsapp-float { position: fixed; right: 20px; bottom: 88px; z-index: 40; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 18px; border: 1px solid #c5a15a; border-radius: 999px; background: linear-gradient(135deg,#152238 0%,#05080e 100%); color: #f0d28b; font-weight: 850; text-decoration: none; box-shadow: 0 9px 26px rgba(0,0,0,.42); transition: transform .18s ease, color .18s ease, border-color .18s ease; }
+    .whatsapp-float:hover { border-color: #e4c078; background: linear-gradient(135deg,#1d2d47 0%,#080b12 100%); color: #fff; transform: translateY(-1px); }
+    .whatsapp-float:focus-visible { outline: 3px solid var(--gold-light); outline-offset: 3px; }
+    .whatsapp-float-icon { display: block; width: 27px; height: 27px; flex: 0 0 27px; object-fit: contain; }
+    @media (max-width: 620px) { .whatsapp-float { right: 14px; bottom: 86px; min-height: 48px; padding: 0 15px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } .whatsapp-float { transition: none; } }
   </style>
 </head>
 <body>
@@ -307,5 +312,9 @@
       <div><a class="phone" href="https://wa.me/34614087896?text=CastelloConnect">WhatsApp: +34 614 087 896</a><div>Servicio bajo reserva previa · Castellón de la Plana</div></div>
     </div>
   </footer>
+  <a class="whatsapp-float" href="https://wa.me/34614087896?text=CastelloConnect" aria-label="Escríbenos por WhatsApp a Castelló Connect Transfer">
+    <img class="whatsapp-float-icon" src="https://raw.githubusercontent.com/ia-WebDesing/castello-connect-transfer-assets/refs/heads/main/cct_whatsapp_icon.png" alt="" aria-hidden="true" width="27" height="27">
+    <span>WhatsApp</span>
+  </a>
 </body>
 </html>
